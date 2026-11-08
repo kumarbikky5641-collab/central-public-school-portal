@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123b68">
+<title>Central Public School | Vishnupur, Begusarai</title>
+<style>
+:root{--navy:#123b68;--blue:#2467ad;--sky:#eaf3ff;--ink:#17263b;--muted:#66758a;--line:#e5ebf2;--bg:#f4f7fb;--green:#18845b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:linear-gradient(120deg,#102f54,#2467ad);color:white;padding:22px max(18px,calc((100% - 1100px)/2))}
+.brand{display:flex;align-items:center;gap:13px}.crest{width:48px;height:48px;border-radius:14px;background:#ffffff20;display:grid;place-items:center;font-size:26px}
+h1{font-size:21px;margin:0}header p{margin:2px 0 0;color:#dceaff;font-size:13px}
+.wrap{max-width:1100px;margin:22px auto;padding:0 16px}.hero{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;grid-template-columns:1.5fr 1fr;gap:20px;box-shadow:0 8px 25px #18365b0a}
+h2{margin:0 0 8px;font-size:22px}.muted{color:var(--muted)}.pill{display:inline-block;background:var(--sky);color:var(--blue);padding:5px 10px;border-radius:30px;font-size:12px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{background:#f5f8fc;padding:14px;border-radius:14px}.stat b{display:block;font-size:23px;color:var(--navy)}.stat span{font-size:12px;color:var(--muted)}
+nav{display:flex;gap:8px;overflow:auto;padding:14px 0;position:sticky;top:0;background:var(--bg);z-index:3}
+nav button,.btn{border:0;border-radius:11px;padding:10px 14px;background:white;color:var(--navy);font-weight:650;white-space:nowrap;cursor:pointer;border:1px solid var(--line)}
+nav button.active,.btn.primary{background:var(--navy);color:white;border-color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:18px;margin-bottom:15px}.card h3{margin:0 0 10px;font-size:17px}.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}
+section{display:none}section.active{display:block}.notice{padding:12px;background:#f4f8ff;border-radius:12px;margin:8px 0}.notice b{display:block}.tag{font-size:11px;color:var(--green);font-weight:700}
+input,select{padding:12px;border:1px solid #d7e0eb;border-radius:10px;width:100%;margin:5px 0 12px;font:inherit}label{font-size:13px;font-weight:650}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}.small{font-size:12px}
+.alert{background:#fff8e7;border:1px solid #f3dfaa;padding:12px;border-radius:12px;color:#755516;font-size:13px}
+@media(max-width:700px){.hero,.grid{grid-template-columns:1fr}.wrap{margin:14px auto}.hero{padding:17px}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="crest">🎓</div><div><h1>Central Public School</h1><p>Vishnupur, Begusarai, Bihar</p></div></div></header>
+<main class="wrap">
+<div class="hero">
+ <div><span class="pill">SCHOOL PORTAL • PREVIEW</span><h2 style="margin-top:12px">Welcome to Central Public School</h2>
+ <p class="muted">A mobile-friendly school portal concept for students, parents and staff. Explore school information, notices, homework and timetable.</p>
+ <button class="btn primary" onclick="showTab('notices')">View notices</button>
+ <button class="btn" onclick="showTab('profile')">School profile</button></div>
+ <div class="stats"><div class="stat"><b>Classes 1–8</b><span>Listed grade range</span></div><div class="stat"><b>2015</b><span>Year established in directory</span></div><div class="stat"><b>149</b><span>Students in directory record</span></div><div class="stat"><b>English</b><span>Listed medium of instruction</span></div></div>
+</div>
+<nav>
+<button class="active" data-tab="home" onclick="showTab('home')">Home</button><button data-tab="profile" onclick="showTab('profile')">School profile</button><button data-tab="notices" onclick="showTab('notices')">Notices</button><button data-tab="student" onclick="showTab('student')">Student demo</button><button data-tab="homework" onclick="showTab('homework')">Homework</button><button data-tab="timetable" onclick="showTab('timetable')">Timetable</button><button data-tab="contact" onclick="showTab('contact')">Contact</button>
+</nav>
+<section id="home" class="active">
+ <div class="grid"><div class="card"><h3>School at a glance</h3><div class="row"><span class="muted">Location</span><b>Vishnupur, Begusarai</b></div><div class="row"><span class="muted">School type</span><b>Co-educational</b></div><div class="row"><span class="muted">Management</span><b>Private unaided</b></div><div class="row"><span class="muted">UDISE code</span><b>10201011011</b></div></div>
+ <div class="card"><h3>Portal shortcuts</h3><div class="notice">📢 <b>School notices</b><span class="small muted">Announcements and events</span></div><div class="notice">📚 <b>Homework</b><span class="small muted">Assignments by subject</span></div><div class="notice">🗓️ <b>Timetable</b><span class="small muted">Daily class schedule</span></div></div></div>
+ <div class="alert">This is a prototype. Notices, homework, timetable and student records below are sample content—not official school updates.</div>
+</section>
+<section id="profile"><div class="card"><h3>School profile</h3><p>Public school-directory information identifies a Central Public School in the Bi Shnupur/Bishanpur area of Begusarai, Bihar, PIN 851101.</p><div class="row"><span class="muted">Name</span><b>Central Public School</b></div><div class="row"><span class="muted">Locality</span><b>Vishnupur / Bishanpur, Begusarai</b></div><div class="row"><span class="muted">Classes listed</span><b>Class 1 to Class 8</b></div><div class="row"><span class="muted">Medium listed</span><b>English</b></div><div class="row"><span class="muted">Established</span><b>2015 (directory record)</b></div><div class="row"><span class="muted">UDISE code</span><b>10201011011</b></div><p class="small muted">Directory records are not a substitute for confirmation from the school. The public listing reports 149 students and 9 teachers; another directory gives a different staff count, so staff figures are not treated as confirmed.</p></div></section>
+<section id="notices"><div class="card"><h3>Notices & announcements</h3><div class="notice"><span class="tag">SAMPLE NOTICE</span><b>Parent–Teacher Meeting</b><span class="small muted">Please contact the school office to confirm the next meeting date.</span></div><div class="notice"><span class="tag">SAMPLE NOTICE</span><b>Unit Test Preparation</b><span class="small muted">Students should follow the timetable shared by their class teacher.</span></div><div class="notice"><span class="tag">SAMPLE NOTICE</span><b>School Events</b><span class="small muted">Official event dates will be added by the school administrator.</span></div></div></section>
+<section id="student"><div class="card"><h3>Student portal preview</h3><p class="muted">Demo-only sign-in screen. No real account or password is connected.</p><label>Student ID</label><input placeholder="Enter student ID"><label>Password</label><input type="password" placeholder="Enter password"><button class="btn primary" onclick="alert('This preview has no live login system yet. A secure school-approved backend is needed.')">Preview login</button></div></section>
+<section id="homework"><div class="card"><h3>Homework (sample)</h3><div class="row"><span>Mathematics — Exercise 4</span><b>Due: Friday</b></div><div class="row"><span>English — Reading practice</span><b>Due: Monday</b></div><div class="row"><span>Science — Chapter notes</span><b>Due: Tuesday</b></div></div></section>
+<section id="timetable"><div class="card"><h3>Daily timetable (sample)</h3><div class="row"><span>09:00–09:45</span><b>Mathematics</b></div><div class="row"><span>09:45–10:30</span><b>English</b></div><div class="row"><span>10:30–11:15</span><b>Science</b></div><div class="row"><span>11:15–11:30</span><b>Break</b></div><div class="row"><span>11:30–12:15</span><b>Social Science</b></div><div class="row"><span>12:15–01:00</span><b>Hindi</b></div></div></section>
+<section id="contact"><div class="card"><h3>School contact & location</h3><div class="row"><span class="muted">Listed address</span><b>Bi Shnupur, Begusarai, Bihar 851101</b></div><div class="row"><span class="muted">Listed phone</span><b>+91 97082 16486</b></div><p class="small muted">Phone and address are from public listings; please verify with the school before relying on them.</p><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Central+Public+School+Bishanpur+Begusarai" target="_blank" rel="noopener">Open map search</a></div></section>
+</main>
+<footer>© Central Public School • Website prototype<br>Official school branding, policies and student data require school approval.</footer>
+<script>
+function showTab(id){document.querySelectorAll('main section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:document.querySelector('nav').offsetTop-8,behavior:'smooth'})}
+</script>
+</body></html>
